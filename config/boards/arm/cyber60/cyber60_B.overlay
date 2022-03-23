@@ -38,9 +38,9 @@
     };
 
     // Buzzer on pin P0.29
-    pwm_buzzer {
-        pwms = <&pwm0 29>;
-    };
+    //pwm_buzzer {
+    //    pwms = <&pwm0 29>;
+    //};
 
     ext-power {
         control-gpios = <&gpio0 7 GPIO_ACTIVE_HIGH>;
