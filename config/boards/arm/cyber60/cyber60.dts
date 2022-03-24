@@ -84,12 +84,12 @@
     };
 
     // PWM buzzer config
-    //buzzer: pwm_buzzer {
-    //    compatible = "pwm-buzzer";
-    //    label = "PWM BUZZER";
-    //    // Override in board revision if required
-    //    pwms = <&pwm0 29>;
-    //    status = "okay";
+    buzzer: pwm_buzzer {
+        compatible = "pwm-buzzer";
+        label = "PWM BUZZER";
+        // Override in board revision if required
+        pwms = <&pwm0 23 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>;
+        status = "okay";
     //};
 
     /* These aliases are provided for compatibility with samples */
@@ -100,7 +100,7 @@
         pwmledgreen = &pwm_led_0;
         pwmledred = &pwm_led_1;
         pwmledblue = &pwm_led_2;
-		//buzzer = &buzzer;
+	buzzer = &buzzer;
     };
 
     ext-power {
