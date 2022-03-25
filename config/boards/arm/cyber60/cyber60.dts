@@ -88,7 +88,7 @@
         compatible = "pwm-buzzer";
         label = "PWM BUZZER";
         // Override in board revision if required
-        pwms = <&pwm0 29>;
+        pwms = <&pwm0 29 (GPIO_ACTIVE_LOW | GPIO_PULL_DOWN)>;
         status = "okay";
     };
 
